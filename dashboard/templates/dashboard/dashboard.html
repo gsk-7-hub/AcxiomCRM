@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Acxiom CRM Dashboard</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f4f6f9;
+            margin: 0;
+        }
+
+        .header {
+            background: #1f2937;
+            color: white;
+            padding: 20px 30px;
+        }
+
+        .header h1 {
+            margin: 0;
+        }
+
+        .container {
+            padding: 30px;
+        }
+
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+
+        .card {
+            background: white;
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+
+        .card h3 {
+            margin-top: 0;
+            color: #555;
+        }
+
+        .number {
+            font-size: 32px;
+            font-weight: bold;
+        }
+
+        .nav {
+            margin-top: 30px;
+        }
+
+        .nav a {
+            display: inline-block;
+            background: #2563eb;
+            color: white;
+            padding: 12px 18px;
+            margin-right: 10px;
+            text-decoration: none;
+            border-radius: 6px;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="header">
+    <h1>Acxiom CRM Dashboard</h1>
+</div>
+
+<div class="container">
+
+    <div class="cards">
+
+        <div class="card">
+            <h3>Total Customers</h3>
+            <div class="number">{{ total_customers }}</div>
+        </div>
+
+        <div class="card">
+            <h3>Total Leads</h3>
+            <div class="number">{{ total_leads }}</div>
+        </div>
+
+        <div class="card">
+            <h3>Total Opportunities</h3>
+            <div class="number">{{ total_opportunities }}</div>
+        </div>
+
+        <div class="card">
+            <h3>Total Follow-ups</h3>
+            <div class="number">{{ total_followups }}</div>
+        </div>
+
+        <div class="card">
+            <h3>Opportunity Value</h3>
+            <div class="number">₹{{ total_opportunity_value }}</div>
+        </div>
+
+        <div class="card">
+            <h3>Won Opportunities</h3>
+            <div class="number">{{ won_opportunities }}</div>
+        </div>
+
+    </div>
+
+    <div class="nav">
+    <a href="/admin/customers/customer/">Customers</a>
+    <a href="/admin/leads/lead/">Leads</a>
+    <a href="/admin/opportunities/opportunity/">Opportunities</a>
+    <a href="/admin/followups/followup/">Follow-ups</a>
+    <a href="/admin/activities/activity/">Activities</a>
+    <a href="/admin/">Admin Panel</a>
+    <a href="/admin/logout/">Logout</a>
+</div>
+
+</div>
+
+</body>
+</html>
